@@ -1,4 +1,4 @@
-// cpp2sem.cpp: определяет точку входа для консольного приложения.
+// cpp2sem.cpp: Г®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГІ ГІГ®Г·ГЄГі ГўГµГ®Г¤Г  Г¤Г«Гї ГЄГ®Г­Г±Г®Г«ГјГ­Г®ГЈГ® ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї.
 //
 
 #include "stdafx.h"
@@ -12,16 +12,16 @@ void stars(int count){
 }
 
 int main(){
-	//задание 1
+	//Г§Г Г¤Г Г­ГЁГҐ 1
 	std::cout << "Hello, World!" << std::endl;
 	std::cout << "mipt" << 2016 << '.' << true << std::endl;
-	//задание 2
+	//Г§Г Г¤Г Г­ГЁГҐ 2
 	double katet1, katet2;
 	std::cin >> katet1;
 	std::cin >> katet2;
 	std::cout << sqrt((katet1 * katet1) + (katet2 * katet2)) << std::endl;
-	//задание 3
-	int amount_stars;  //Количество звёздочек
+	//Г§Г Г¤Г Г­ГЁГҐ 3
+	int amount_stars;  //ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г§ГўВёГ§Г¤Г®Г·ГҐГЄ
 	std::cin >> amount_stars;
 	for (int n = 0; n < amount_stars; n++) {
 		stars(amount_stars);
@@ -29,21 +29,21 @@ int main(){
 	}
 
 	std::cout << std::endl;
-	//задание 4
+	//Г§Г Г¤Г Г­ГЁГҐ 4
 	for (int n = 0; n < amount_stars; n++) {
 		stars(n);
 		std::cout << std::endl;
 	}
 
 	std::cout << std::endl;
-	//задание 5
+	//Г§Г Г¤Г Г­ГЁГҐ 5
 	for (int n = 0; n < amount_stars; n++) {
 		stars(amount_stars-n);
 		std::cout << std::endl;
 	}
 
 	std::cout << std::endl;
-	//задание 6
+	//Г§Г Г¤Г Г­ГЁГҐ 6
 	for (int n = 0; n < amount_stars; n += 2) {
 		stars(amount_stars-n);
 		std::cout << std::endl;
