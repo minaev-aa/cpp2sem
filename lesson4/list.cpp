@@ -332,6 +332,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	LinkedList<int> G(L.reverse());
 	G.print();
 	G = F + L;
+	G.print();
 	G.del_all();
 	G.print();
 	system("pause");
