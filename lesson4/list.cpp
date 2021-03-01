@@ -129,11 +129,9 @@ public:
 			{
 				Element<T> * prev = cur;
 				cur = cur->getNext();
-				prev = nullptr;
 				delete prev;
 			}
 			if (begin != nullptr)
-				begin = nullptr;
 				delete begin;
 		}
 	}
