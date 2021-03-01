@@ -121,18 +121,16 @@ public:
 	{
 		//деструктор - освобождение памяти
 		num = 0;
-		Element<T> * cur = begin;
+		element<T> * cur = begin;
 		if (cur != nullptr)
 		{
-			cur = cur->getNext();
 			while (cur != nullptr)
 			{
 				Element<T> * prev = cur;
 				cur = cur->getNext();
 				delete prev;
 			}
-			if (begin != nullptr)
-				delete begin;
+			begin = nullptr;
 		}
 	}
 
