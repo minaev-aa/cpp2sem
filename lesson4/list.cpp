@@ -121,7 +121,7 @@ public:
 	{
 		//деструктор - освобождение памяти
 		num = 0;
-		element<T> * cur = begin;
+		Element<T> * cur = begin;
 		if (cur != nullptr)
 		{
 			while (cur != nullptr)
