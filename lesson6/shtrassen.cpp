@@ -195,8 +195,8 @@ int main() {
 	//output(N, a);
 	//output(N, b);
 
-	output(N, c1);
-	output(N, c2);
+	//output(N, c1);
+	//output(N, c2);
 	
 	std::cout << seconds1 << " " << seconds2 <<std::endl;
 	std::cout << std::endl;
