@@ -98,9 +98,9 @@ public:
 	}
 
 	void Remove(Node* Current)
-	{
+	{ 
 		if(Current==NULL)
-			return;
+				return;
 		if(Current->getLeft()==NULL && Current->getLeft()==NULL)
 			{
 				Node* Parent = Current->getParent();
@@ -143,12 +143,15 @@ public:
 		}
 		if(Current->getLeft()!=NULL && Current->getRight()!=NULL)
 		{
-			
 			Node * Child= Min_R(root->getRight());
 			Node * GrandChild = Child->getRight();
 			Node * Parent = Child ->getParent();
-			Parent->setRight(GrandChild);
-			GrandChild->setParent(Parent);
+			if(Parent != root)
+				Parent->setLeft(GrandChild);
+			else
+				Parent->setRight(GrandChild);
+			if(GrandChild!=NULL)
+				GrandChild->setParent(Parent);
 			Child ->setLeft(Current->getLeft());
 			Child ->setRight(Current->getRight());
 			Current->getLeft()->setParent(Child);
@@ -175,11 +178,10 @@ public:
 			return Min_R(Current->getRight());
 		return Current;
 	}
-
 	Node* Find(int data, Node* Current = NULL)
 	{
 		if(Current==NULL) 
-			throw 0;
+			return NULL;
 		if (data == NULL || data == Current->getData())
 				return Current;
 		if (data<Current->getData())
@@ -236,16 +238,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	Node *M = T.Min_R(T.getRoot());
 	cout<<"\nMin = "<<M->getData()<<'\n';
 	T.Add(10);
+
 	Node* n;
-	try
-	{
-		n = T.Find(5, T.getRoot());
-	}
-	catch(...)
-	{
-		n=NULL;
-	}
+	n = T.Find(5, T.getRoot());
 	T.Remove(n);
+
 	void (*f_ptr)(Node*); f_ptr = print;
 	cout<<"\n-----\nPreorder:"<<'\n';
 	T.PreOrder(T.getRoot(), f_ptr);
