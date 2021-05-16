@@ -1,8 +1,3 @@
-// 9.cpp: определяет точку входа для консольного приложения.
-//
-#include "stdafx.h"
-  
-
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -56,7 +51,8 @@ public:
 		cycle=true; 
 	} 
 	}
-		void find_comps() {
+	
+	void find_comps() {
 		int count = 0;
 		for (size_t i=0; i<node.size(); ++i)
 			used[i] = false;
